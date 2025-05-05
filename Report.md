@@ -139,11 +139,11 @@ Below are the two interactive dashboards that explore key trends and relationshi
 1. **Dashboard 1: Housing Price Insights**  
    Displays the correlation between features like number of bedrooms, bathrooms, and price per square foot.
 
-   ![Dashboard 1: Housing Price Insights](link_to_dashboard_1_image)
+   ![Dashboard 1: Housing Price Insights](https://github.com/Kaosarat10/Business-Case-Analysis-of-Property-Pricing-Patterns-in-Boston/blob/main/Boston%20Housing%201.png)
 
 2. **Dashboard 2: Feature Impact on Pricing**  
    Highlights how amenities (e.g., parking, hot water heating, and air conditioning) influence pricing and the proportion of overpriced homes.
 
-   ![Dashboard 2: Feature Impact on Pricing](link_to_dashboard_2_image)
+   ![Dashboard 2: Feature Impact on Pricing](https://github.com/Kaosarat10/Business-Case-Analysis-of-Property-Pricing-Patterns-in-Boston/blob/main/Boston%20housing%202.png)
 
 ---
