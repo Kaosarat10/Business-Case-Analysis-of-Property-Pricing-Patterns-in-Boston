@@ -49,48 +49,6 @@ To determine the most influential property features on housing prices and evalua
   ```excel
   # Case Study: Strategic Pricing Analysis in the Boston Real Estate Market
 
-## 1. Executive Summary  
-This business analysis case study investigates pricing dynamics within the Boston housing market using statistical methods and data modeling in Microsoft Excel. The objective was to uncover key drivers of housing prices, detect pricing inefficiencies, and provide actionable recommendations to real estate stakeholders—buyers, sellers, agents, and developers.
-
-Through advanced data transformation and diagnostic analysis, this study reveals how specific property features influence house values, enabling more informed pricing, investment, and development decisions.
-
----
-
-## 2. Business Problem  
-In a competitive and fast-moving real estate market like Boston, stakeholders often struggle with pricing transparency. Buyers overpay for homes lacking key amenities, and sellers underprice properties with high market potential. Real estate professionals need data-backed insights to identify which features justify premium pricing and which do not.
-
----
-
-## 3. Objective  
-To determine the most influential property features on housing prices and evaluate whether homes are fairly priced based on a multivariate analysis of attributes such as size, amenities, and location.
-
----
-
-## 4. Dataset Overview  
-- **Original Dataset**: 12 columns including price, area, number of bedrooms, bathrooms, location, and furnishing.  
-- **Enhanced Dataset**: Expanded to 18 variables via feature engineering (e.g., *Price per Sqft*, *Home Size Category*, *Pricing Status*).  
-- **Volume**: 545 housing entries  
-
----
-
-## 5. Methodology  
-
-### Tools Used:  
-- Microsoft Excel  
-- Power Query  
-- PivotTables  
-- Conditional Logic  
-- Custom Formulas  
-
-### Techniques:  
-- Data Cleaning & Transformation  
-- Feature Engineering  
-- Descriptive Statistics  
-- Diagnostic Analysis  
-- Categorization & Trend Segmentation  
-- Dashboard Reporting  
-
----
 
 ## 6. Key Feature Engineering Steps  
 
@@ -98,18 +56,30 @@ To determine the most influential property features on housing prices and evalua
   ```excel
   = Price / Area
 
+  ## Formulas Used in the Analysis
+
+### 1. Home Size Category Formula  
+Classifies homes based on the area in square feet into categories: Compact, Standard, Spacious, and Luxury.
+
+```excel
 =IF(Area <= 5000, "Compact", IF(Area <= 8000, "Standard", IF(Area <= 11000, "Spacious", "Luxury")))
+
+
 
 0 = No Parking  
 1 = Limited  
 2 = Moderate  
-3 = Spacious  
+3 = Spacious
 
-=IF(AND([@[Price per sqft]] >993, [@area] < 5000,
-    OR([@guestroom]="no", [@mainroad]="no", [@basement]="no",
-       [@hotwaterheating]="no", [@[preffered area]]="no",
+=IF(AND([@[Price per sqft]] > 993, [@area] < 5000, 
+    OR([@guestroom]="no", [@mainroad]="no", [@basement]="no", 
+       [@hotwaterheating]="no", [@[preffered area]]="no", 
        [@airconditioning]="no", [@furnishingstatus]="unfurnished")),
   "Overpriced", "Normal")
+
+
+
+
 
 ## 7. Analytical Approach  
 Using descriptive and diagnostic analysis techniques:
