@@ -49,38 +49,30 @@ To determine the most influential property features on housing prices and evalua
   ```excel
   # Case Study: Strategic Pricing Analysis in the Boston Real Estate Market
 
-
-## 6. Key Feature Engineering Steps  
-
-- **Price per Sqft**:  
-  ```excel
-  = Price / Area
-
-  ## Formulas Used in the Analysis
+## Formulas Used in the Analysis
 
 ### 1. Home Size Category Formula  
 Classifies homes based on the area in square feet into categories: Compact, Standard, Spacious, and Luxury.
 
-```excel
-=IF(Area <= 5000, "Compact", IF(Area <= 8000, "Standard", IF(Area <= 11000, "Spacious", "Luxury")))
+`=IF(Area <= 5000, "Compact", IF(Area <= 8000, "Standard", IF(Area <= 11000, "Spacious", "Luxury")))`
+
+---
+
+### 2. Parking Availability Classification  
+Classifies parking availability into four tiers: No Parking, Limited, Moderate, Spacious.
 
 
+---
 
-0 = No Parking  
-1 = Limited  
-2 = Moderate  
-3 = Spacious
+### 3. Pricing Status Formula  
+Identifies overpriced homes based on various features, including price per square foot, amenities, and location.
 
-=IF(AND([@[Price per sqft]] > 993, [@area] < 5000, 
+`=IF(AND([@[Price per sqft]] > 993, [@area] < 5000, 
     OR([@guestroom]="no", [@mainroad]="no", [@basement]="no", 
        [@hotwaterheating]="no", [@[preffered area]]="no", 
        [@airconditioning]="no", [@furnishingstatus]="unfurnished")),
-  "Overpriced", "Normal")
-
-
-
-
-
+  "Overpriced", "Normal")`
+  
 ## 7. Analytical Approach  
 Using descriptive and diagnostic analysis techniques:
 
@@ -115,22 +107,6 @@ Using descriptive and diagnostic analysis techniques:
 
 ---
 
-## 11. Visualizations  
-
-Below are the two interactive dashboards that explore key trends and relationships within the data:
-
-1. **Dashboard 1: Housing Price Insights**  
-   Displays the correlation between features like number of bedrooms, bathrooms, and price per square foot.
-
-   ![Dashboard 1: Housing Price Insights](link_to_dashboard_1_image)
-
-2. **Dashboard 2: Feature Impact on Pricing**  
-   Highlights how amenities (e.g., parking, hot water heating, and air conditioning) influence pricing and the proportion of overpriced homes.
-
-   ![Dashboard 2: Feature Impact on Pricing](link_to_dashboard_2_image)
-
----
-
 ## 9. Stakeholder-Specific Recommendations  
 
 ### For Property Sellers  
@@ -156,12 +132,18 @@ This case study demonstrates how statistical analysis and Excel modeling can unc
 
 ---
 
-## 11. Sample Dashboard *(Optional)*  
-*Include screenshots or GIFs here if uploading images alongside the markdown file.*
+## 11. Visualizations  
+
+Below are the two interactive dashboards that explore key trends and relationships within the data:
+
+1. **Dashboard 1: Housing Price Insights**  
+   Displays the correlation between features like number of bedrooms, bathrooms, and price per square foot.
+
+   ![Dashboard 1: Housing Price Insights](link_to_dashboard_1_image)
+
+2. **Dashboard 2: Feature Impact on Pricing**  
+   Highlights how amenities (e.g., parking, hot water heating, and air conditioning) influence pricing and the proportion of overpriced homes.
+
+   ![Dashboard 2: Feature Impact on Pricing](link_to_dashboard_2_image)
 
 ---
-
-## 12. Author  
-**[IBRAHIM KAOSARAT]**  
-
-
